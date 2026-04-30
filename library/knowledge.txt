@@ -1,0 +1,9 @@
+【终端控制智能体操作指南】
+1. 常用目录切换命令：使用 'cd' 命令切换目录。在 Windows 中需要区分终端类型：
+   - 在 cmd 中，若需同时切换盘符和目录，可使用 'cd /d D:\Project'。
+   - 在 PowerShell 中，可直接使用 'cd D:\Project' 或 'Set-Location D:\Project'。
+2. Python 环境管理：建议使用 conda 创建独立虚拟环境。激活环境命令为 'conda activate env_name'。
+3. 实验二安全规范：Agent 在执行 'rm' 或 'del' 等删除命令前，必须先检索知识库中的安全确认流程。
+4. 错误处理：若终端返回 'Permission Denied'，通常需要以管理员身份运行终端或检查文件占用状态。
+5. YOLOv11 环境要求：本项目涉及的 YOLOv11 训练脚本需安装 ultralytics 库，并确保 CUDA 版本与 PyTorch 匹配。
+6. RAG 检索逻辑：当用户提问包含“如何”、“怎么”等关键词时，系统会计算问题向量与本文件中各段落的余弦相似度。
